@@ -1,1 +1,4 @@
-chapter6.hs
+-- Haskell the craft of functional programming third edition
+-- chapter 5
+-- Kay, Nov, 2015
+-- programming with lists
