@@ -52,10 +52,9 @@ beats move = case move of
         Rock     -> Paper
         Scissors -> Rock
 -- find out what the score is for moves and return Win or Draw or Lose
-
 score :: Move -> Move -> Result
 score this_move opposing_move = case this_move of
-    opposing_move -> Draw
+    opposing_move -> Draw   
     _
         | this_move == beats opposing_move -> Win
         | otherwise                        -> Lose
