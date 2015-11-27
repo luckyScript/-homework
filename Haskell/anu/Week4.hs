@@ -33,6 +33,7 @@ expression_to_string expr = case expr of
 eval :: Expression -> Expression
 eval exp = case exp of
     [] -> []
+    Num x -> [Num x]
     Num x:op:Num y:[] -> case op of
         Plus                -> [Num (x + y)]
         Minus               -> [Num (x - y)]
