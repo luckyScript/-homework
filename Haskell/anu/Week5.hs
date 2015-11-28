@@ -18,5 +18,5 @@ convert_to_upper_case list = case list of
     x:xs    -> upper' x:convert_to_upper_case xs
         where upper' = fromEnum(toEnum x -32)
 
-invert :: [Integer] -> [Integer]
+invert :: [a] -> [Integer]
 invert xs = flodl : [] xs

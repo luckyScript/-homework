@@ -34,3 +34,4 @@ map'' f xs = foldr (\x acc -> f x:acc) [] xs
 
 max' :: (Ord a) => [a] -> a
 max' = foldl1 max
+
