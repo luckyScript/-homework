@@ -27,7 +27,7 @@ quicksort (x:xs) =
     in quicksort smallerOrEqual ++ [x] ++ quicksort larger
 
 sum' :: (Num a) => [a] -> a
-sum' = foldl (+) 0
+sum' list = foldl (+) 0 list
 
 map'' :: (a -> b) -> [a] -> [b]
 map'' f xs = foldr (\x acc -> f x:acc) [] xs 
