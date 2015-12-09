@@ -13,7 +13,7 @@ main(void)
             {
                 if(num%7 == c)
                 {
-                    
+                    printf("%d",num);               
                 }
             }
         }
