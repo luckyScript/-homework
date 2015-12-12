@@ -51,8 +51,6 @@ data Sparse_Line e = Sparse_Line {y_pos :: Y_Coord, entries :: Placed_Elements e
 
    
 type Ordered_Lists_2D e = [Sparse_Line e]
-
-
 instance (Show e) => Show (Sparse_Line e) where
    show line = (show (y_pos line)) ++ ": " ++ show (entries line) ++ "\r" ++ "\n"
 

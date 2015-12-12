@@ -35,9 +35,6 @@ transition_elements elems y_coord world = case elems of
     []      -> []
 
 transition_world :: Ordered_Lists_2D Cell -> Ordered_Lists_2D Cell
-transition_world world = scan_ordered_lines world world
-
-scan_ordered_lines ::Ordered_Lists_2D Cell -> Ordered_Lists_2D Cell -> Ordered_Lists_2D Cell
-scan_ordered_lines world background = case world of
-    y:ys        -> (Sparse_Line {y_pos = y_pos y, entries = (transition_elements (entries y) (y_pos y) background)}) : transition_world ys
+transition_world world = case world of
+    y:ys        -> (Sparse_Line {y_pos = y_pos y, entries = (transition_elements (entries y) (y_pos y) world)}) : transition_world ys
     []          -> []
