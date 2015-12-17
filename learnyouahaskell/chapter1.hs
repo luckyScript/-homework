@@ -14,7 +14,7 @@
         elem
         "luckyscript" !! 5
 -}
-initials :: String -> String -> String
-initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
-    where (f:_) = firstname
-          (l:_) = lastname
+fibonacci' :: Integer -> Integer
+fibonacci' 0 = 0
+fibonacci' 1 = 1
+fibonacci' num = fibonacci' (num-1) + fibonacci' (num-2)
