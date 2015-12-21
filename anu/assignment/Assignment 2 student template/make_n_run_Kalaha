@@ -1,0 +1,3 @@
+rm ./Kalaha
+./make_Kalaha
+./Kalaha
