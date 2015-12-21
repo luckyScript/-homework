@@ -5,6 +5,9 @@
 
 import Dates
 import Integer_Subtypes
+import Zellers_Congruence
+import Valid_Dates
+import Test.QuickCheck hiding (Positive)
 
 days_since_1_January_0 :: Date -> Natural
 days_since_1_January_0 (Date day month year)
@@ -33,3 +36,7 @@ is_leap_year year
 
 days_before_this_year :: Year -> Natural
 days_before_this_year year = (year - (year `quot` 4 - year `quot` 100 + year `quot` 400)) * 365 + (year `quot` 4 - year `quot` 100 + year `quot` 400)*366
+
+day_of_week :: Date -> Day_Names
+day_of_week date = iso_day_no_to_name (from_Natural_to_Positive (days_since_1_January_0 date + 1) `mod` 7)
+

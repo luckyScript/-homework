@@ -37,4 +37,3 @@ iso_day_no_to_name iso_day_no = toEnum (fromInteger (toInteger iso_day_no-1))
 
 day_name_to_iso_day_no :: Day_Names -> Positive
 day_name_to_iso_day_no day = fromInteger (1+toInteger(fromEnum day))
-
